@@ -1,3 +1,6 @@
+var CONTEXT_PATH = "/community"
+console.log("global.js loaded, CONTEXT_PATH set to: " + CONTEXT_PATH);
+
 window.alert = function(message) {
 	if(!$(".alert-box").length) {
 		$("body").append(
