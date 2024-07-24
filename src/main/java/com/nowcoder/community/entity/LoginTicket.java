@@ -51,7 +51,7 @@ public class LoginTicket {
     }
 
     @Override
-    public String toString() {
+    public String   toString() {
         return "LoginTicket{" +
                 "id=" + id +
                 ", userId=" + userId +
