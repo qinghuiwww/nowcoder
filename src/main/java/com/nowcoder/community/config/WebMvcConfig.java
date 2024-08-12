@@ -32,5 +32,8 @@ public class WebMvcConfig implements WebMvcConfigurer {
         registry.addInterceptor(loginRequiredInterceptor)
                 .excludePathPatterns("/**/*.css", "/**/*.js", "/**/*.png", "/**/*.jpg", "/**/*.jpeg");
 
+//        registry.addInterceptor(loginRequiredInterceptor)
+//                .addPathPatterns("/**") // 拦截所有请求
+//                .excludePathPatterns("/login", "/register", "/static/**"); // 排除不需要登录的路径
     }
 }
