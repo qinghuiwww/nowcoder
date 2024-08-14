@@ -49,8 +49,8 @@
 						</li>
 					</ul>
 					<!-- 搜索 -->
-					<form class="form-inline my-2 my-lg-0" action="site/search.html">
-						<input class="form-control mr-sm-2" type="search" aria-label="Search" />
+					<form class="form-inline my-2 my-lg-0" method="get" th:action="@{/search}">
+						<input class="form-control mr-sm-2" type="search" aria-label="Search" name="keyword" th:value="${keyword}"/>
 						<button class="btn btn-outline-light my-2 my-sm-0" type="submit">搜索</button>
 					</form>
 				</div>
@@ -148,7 +148,7 @@
 					<li th:class="|page-item ${page.current==1?'disabled':''}|">
 						<a class="page-link" th:href="@{${page.path}(current=${page.current -1})}">上一页</a></li>
 					<li th:class="|page-item ${i==page.current?'active':''}|" th:each="i:${#numbers.sequence(page.from,page.to)}">
-						<a class="page-link" href="#" th:text="${i}">1</a>
+						<a class="page-link" th:href="@{${page.path}(current=${i})}"  th:text="${i}">1</a>
 					</li>
 					<li th:class="|page-item ${page.current==page.total?'disabled':''}|">
 						<a class="page-link" th:href="@{${page.path}(current=${page.current+1})}">下一页</a>
