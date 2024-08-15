@@ -67,4 +67,19 @@ public interface CommunityConstant {
      */
     int SYSTEM_USER_ID = 1;
 
+    /**
+     * 授权：普通用户
+     */
+    String AUTHORITY_USER = "user";
+
+    /**
+     * 授权：管理员
+     */
+    String AUTHORITY_ADMIN = "admin";
+
+    /**
+     * 授权：版主
+     */
+    String AUTHORITY_MODERATOR = "moderator";
+
 }
