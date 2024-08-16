@@ -1,4 +1,4 @@
-var CONTEXT_PATH = "/community"
+var CONTEXT_PATH = ""
 console.log("global.js loaded, CONTEXT_PATH set to: " + CONTEXT_PATH);
 
 window.alert = function(message) {
